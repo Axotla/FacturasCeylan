@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+
+//CODIGO PARA RESTAURAR BASE DE DATOS mysql -u root -p -A <dumpfile.SQLa
 namespace FacturasCeylan
 {
     public partial class Facturacion : Form
@@ -56,6 +58,7 @@ namespace FacturasCeylan
             if (articulos.Count != 0 && cliente != null)
             {
                 Factura nuevo = new Factura(cliente, articulos);
+                nuevo.pushFactura();
             }
             else
             {

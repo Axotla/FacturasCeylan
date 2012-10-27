@@ -7,24 +7,47 @@ namespace FacturasCeylan
 {
     class Articulo
     {
-        decimal precio;
+        decimal Precio;
         String Nombre;
-        //String Codigo;
-        int cantidad;
-        String tipo;
-        private string p;
-        private decimal p_2;
-        private int p_3;
-        private string p_4;
-      
+        int Cantidad;
+        String Tipo;      
         //A Singleton 
+        public decimal precio
+        {
+            get
+            {
+                return Precio;
+            }
+        }
+        public String nombre
+        {
+            get
+            {
+                return Nombre;
+            }
+        }
+        public int cantidad
+        {
+            get
+            {
+                return Cantidad;
+            }
+        }
+        public String tipo
+        {
+            get
+            {
+                return Tipo;
+            }
+        }
+
         public Articulo(String Nombre, decimal precio, int cantidad,String tipo)
         {
             this.Nombre = Nombre;
             
-            this.cantidad = cantidad;
-            this.precio = precio * cantidad;
-            this.tipo = tipo;
+            this.Cantidad = cantidad;
+            this.Precio = precio * cantidad;
+            this.Tipo = tipo;
         }        
     }
 }
