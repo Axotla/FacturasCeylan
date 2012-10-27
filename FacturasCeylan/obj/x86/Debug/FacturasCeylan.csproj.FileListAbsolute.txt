@@ -7,7 +7,6 @@ c:\users\marko\documents\visual studio 2010\Projects\FacturasCeylan\FacturasCeyl
 c:\users\marko\documents\visual studio 2010\Projects\FacturasCeylan\FacturasCeylan\obj\x86\Debug\FacturasCeylan.exe
 c:\users\marko\documents\visual studio 2010\Projects\FacturasCeylan\FacturasCeylan\obj\x86\Debug\FacturasCeylan.pdb
 c:\users\marko\documents\visual studio 2010\Projects\FacturasCeylan\FacturasCeylan\obj\x86\Debug\FacturasCeylan.Menu.resources
-C:\Users\Marko\documents\visual studio 2010\Projects\FacturasCeylan\FacturasCeylan\bin\Debug\LibPrintTicket.dll
 C:\Users\Marko\documents\visual studio 2010\Projects\FacturasCeylan\FacturasCeylan\bin\Debug\LibPrintTicket.pdb
 C:\Users\Marko\documents\visual studio 2010\Projects\FacturasCeylan\FacturasCeylan\obj\x86\Debug\FacturasCeylan.Impresion.resources
 C:\Users\Marko\documents\visual studio 2010\Projects\FacturasCeylan\FacturasCeylan\obj\x86\Debug\FacturasCeylan.Facturacion.resources

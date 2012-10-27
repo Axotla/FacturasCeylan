@@ -10,15 +10,16 @@ namespace FacturasCeylan
 {
     public partial class Facturacion : Form
     {
-        Cliente cliente = new Cliente();
+        Cliente cliente;
         List<Articulo> articulos = new List<Articulo>();
+        //DATOS DE LA FACTURACION 
         public Facturacion()
         {
             InitializeComponent();
         }
         private void search_Click(object sender, EventArgs e)
         {
-            
+            cliente = new Cliente();
             if (cliente.searchCliente(RFCdata.Text))
             {
                 //AQUI CARGO EL CLIENTE
@@ -45,7 +46,20 @@ namespace FacturasCeylan
         {
             if ((!String.IsNullOrEmpty(AArtName.Text)) && (!String.IsNullOrEmpty(AType.Text)))
             {
-                articulos.Add(new Articulo(AArtName.Text,(float)APrecio.Value,(int)ACant.Value,AType.Text));
+                articulos.Add(new Articulo(AArtName.Text,APrecio.Value,Convert.ToInt32(ACant.Value),AType.Text));
+                MessageBox.Show("AGREAGADO CREO");
+            }
+        }
+
+        private void FACTURAR_Click(object sender, EventArgs e)
+        {
+            if (articulos.Count != 0 && cliente != null)
+            {
+                Factura nuevo = new Factura(cliente, articulos);
+            }
+            else
+            {
+                MessageBox.Show("ERROR FALTA CLIENTE O ARTICULOS");
             }
         }
     }

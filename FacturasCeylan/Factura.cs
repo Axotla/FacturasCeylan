@@ -7,6 +7,12 @@ namespace FacturasCeylan
 {
     class Factura
     {
-     
+        Cliente cliente;
+        List<Articulo> arts;
+        public Factura(Cliente c, List<Articulo> a)
+        {
+            this.cliente = c;
+            this.arts = a;
+        }
     }
 }

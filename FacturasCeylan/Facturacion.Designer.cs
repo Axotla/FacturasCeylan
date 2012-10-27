@@ -50,6 +50,7 @@
             this.ACant = new System.Windows.Forms.NumericUpDown();
             this.AType = new System.Windows.Forms.ComboBox();
             this.AAdd = new System.Windows.Forms.Button();
+            this.FACTURAR = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AListadoArt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.APrecio)).BeginInit();
@@ -280,11 +281,22 @@
             this.AAdd.UseVisualStyleBackColor = true;
             this.AAdd.Click += new System.EventHandler(this.AAdd_Click);
             // 
+            // FACTURAR
+            // 
+            this.FACTURAR.Location = new System.Drawing.Point(174, 627);
+            this.FACTURAR.Name = "FACTURAR";
+            this.FACTURAR.Size = new System.Drawing.Size(75, 23);
+            this.FACTURAR.TabIndex = 18;
+            this.FACTURAR.Text = "FACTURAR";
+            this.FACTURAR.UseVisualStyleBackColor = true;
+            this.FACTURAR.Click += new System.EventHandler(this.FACTURAR_Click);
+            // 
             // Facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 633);
+            this.ClientSize = new System.Drawing.Size(450, 659);
+            this.Controls.Add(this.FACTURAR);
             this.Controls.Add(this.AAdd);
             this.Controls.Add(this.AType);
             this.Controls.Add(this.ACant);
@@ -336,6 +348,7 @@
         private System.Windows.Forms.NumericUpDown ACant;
         private System.Windows.Forms.ComboBox AType;
         private System.Windows.Forms.Button AAdd;
+        private System.Windows.Forms.Button FACTURAR;
     }
 }
 
