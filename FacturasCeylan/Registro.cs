@@ -26,13 +26,12 @@ namespace FacturasCeylan
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!(String.IsNullOrEmpty(RNameCliente.Text) || String.IsNullOrEmpty(RRFC.Text) || String.IsNullOrEmpty(RDomici.Text)))
+            if (!(String.IsNullOrEmpty(RNameCliente.Text) || String.IsNullOrEmpty(RRFC.Text) || String.IsNullOrEmpty(RCalle.Text) || String.IsNullOrEmpty(RColonia.Text) || String.IsNullOrEmpty(RNumero.Text) || String.IsNullOrEmpty(RCPostal.Text) || String.IsNullOrEmpty(RMunip.Text) || String.IsNullOrEmpty(REstado.Text)))
             {
                 Cliente nuevo = new Cliente();
-                ///ESTE METODO SOLO ENTRA CUANDO NO ESTAN VACIOS LOS 3 CAMPOS ANTERIORES
                 if (!nuevo.searchCliente(RRFC.Text))
                 {
-                    nuevo.creaCliente(RRFC.Text, RNameCliente.Text, RDomici.Text, REmail.Text, RPhone.Text);
+                    nuevo.creaCliente(RRFC.Text, RNameCliente.Text, RColonia.Text,RCalle.Text,RNumero.Text,RNumeroInt.Text,Convert.ToInt32(RCPostal.Text),RMunip.Text,REstado.Text, REmail.Text, RPhone.Text);
                     this.Hide();
                 }
                 else
