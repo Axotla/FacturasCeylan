@@ -66,11 +66,20 @@ namespace FacturasCeylan
                 return false;
             MySqlCommand query = con.CreateCommand();
             query.CommandText = Query;
-            //MessageBox.Show(Query); podemos observar q ocurre con la query
-            if (query.ExecuteNonQuery() == -1)//ERROR 
+            //MessageBox.Show(Query); //podemos observar q ocurre con la query
+            try
+            {
+                if (query.ExecuteNonQuery() == -1)//ERROR 
+                    return false;
+                else
+                    return true;
+            }
+            catch (MySqlException error)
+            {
+                MessageBox.Show("Message: " + error.Message + "\n");
                 return false;
-            else
-                return true;           
+            }
+            
         }
 
 

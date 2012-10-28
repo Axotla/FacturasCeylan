@@ -21,6 +21,9 @@ namespace FacturasCeylan
             {
                 bd.ExecuteNonQuery("INSERT INTO articulo VALUES(NULL, '" + aux.nombre + "','" + aux.cantidad.ToString() + "','" + aux.precio.ToString() + "','" + aux.tipo + "');");
             }
+            int folio = 20000;
+            //bd.Execute("SELECT Folio FROM factura ORDER BY ASC LIMIT = 1);");
+            bd.ExecuteNonQuery("INSERT INTO factura VALUES(" + folio + ",'" + cliente.rfc + "','" + DateTime.Today.ToString("yyyy-MM-dd") + "')");
         }
     }
 }

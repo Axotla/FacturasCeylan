@@ -12,12 +12,20 @@ namespace FacturasCeylan
 {
     public partial class Facturacion : Form
     {
+        
         Cliente cliente;
         List<Articulo> articulos = new List<Articulo>();
         //DATOS DE LA FACTURACION 
         public Facturacion()
         {
             InitializeComponent();
+            AListadoArt.ColumnCount = 4;
+            AListadoArt.ColumnHeadersVisible = true;
+            AListadoArt.Columns[0].Name = "CANTIDAD";
+            AListadoArt.Columns[1].Name = "NOMBRE";
+            AListadoArt.Columns[2].Name = "UNITARIO";
+            AListadoArt.Columns[3].Name = "IMPORTE";
+            
         }
         private void search_Click(object sender, EventArgs e)
         {
@@ -25,18 +33,32 @@ namespace FacturasCeylan
             if (cliente.searchCliente(RFCdata.Text))
             {
                 //AQUI CARGO EL CLIENTE
+                RFCLabel.Text = cliente.rfc;   
                 ClienteLabel.Text = cliente.nombre;
-                DomLabel.Text = cliente.direccion;
-                RFCLabel.Text = cliente.rfc;
-                Accept.Enabled = true;
-                
+                ColLabel.Text = cliente.colonia;
+                CalleLabel.Text = cliente.calle;
+                NumLabel.Text = cliente.numero;
+                NumIntLabel.Text = cliente.numint;
+                CPLabel.Text = cliente.codigopostal.ToString();
+                DelMunLabel.Text = cliente.delegmunip;
+                EstadoLabel.Text = cliente.estado;
+                EmailLabel.Text = cliente.correo;
+                TelLabel.Text = cliente.telefono;                            
             }
             else
             {
-                ClienteLabel.Text = "NULL";
-                DomLabel.Text = "NULL";
-                RFCLabel.Text = "NULL";
-                Accept.Enabled = false;
+                cliente = null;
+                RFCLabel.Text = "---";
+                ClienteLabel.Text = "---";
+                ColLabel.Text = "---";
+                CalleLabel.Text = "---";
+                NumLabel.Text = "---";
+                NumIntLabel.Text = "---";
+                CPLabel.Text = "---";
+                DelMunLabel.Text = "---";
+                EstadoLabel.Text = "---";
+                EmailLabel.Text = "---";
+                TelLabel.Text = "---";
                 MessageBox.Show("CLIENTE NO EXISTE");
                 Registro reg = new Registro(RFCdata.Text);
                 reg.Show();
@@ -48,8 +70,8 @@ namespace FacturasCeylan
         {
             if ((!String.IsNullOrEmpty(AArtName.Text)) && (!String.IsNullOrEmpty(AType.Text)))
             {
-                articulos.Add(new Articulo(AArtName.Text,APrecio.Value,Convert.ToInt32(ACant.Value),AType.Text));
-                MessageBox.Show("AGREAGADO CREO");
+                articulos.Add(new Articulo(AArtName.Text, APrecio.Value, Convert.ToInt32(ACant.Value), AType.Text));              
+                AListadoArt.Rows.Add(Convert.ToInt32(ACant.Value),AArtName.Text, APrecio.Value,  APrecio.Value * ACant.Value);
             }
         }
 
