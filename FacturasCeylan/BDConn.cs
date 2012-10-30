@@ -8,11 +8,7 @@ namespace FacturasCeylan
 {
     class BD
     {
-         //Atributos
-        //String Server = "127.0.0.1";
-        //String Database = "test";
-        //String Uid = "root";
-        //String Pwd = "Markox";
+         
         bool status = false;
         MySqlConnection con;
         /* -------------------------------*/

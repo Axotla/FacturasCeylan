@@ -118,7 +118,7 @@
             this.RNameCliente.MaxLength = 200;
             this.RNameCliente.Name = "RNameCliente";
             this.RNameCliente.Size = new System.Drawing.Size(279, 20);
-            this.RNameCliente.TabIndex = 6;
+            this.RNameCliente.TabIndex = 0;
             // 
             // RRFC
             // 
@@ -127,7 +127,7 @@
             this.RRFC.MaxLength = 13;
             this.RRFC.Name = "RRFC";
             this.RRFC.Size = new System.Drawing.Size(279, 20);
-            this.RRFC.TabIndex = 7;
+            this.RRFC.TabIndex = 1;
             // 
             // RCalle
             // 
@@ -136,7 +136,7 @@
             this.RCalle.MaxLength = 300;
             this.RCalle.Name = "RCalle";
             this.RCalle.Size = new System.Drawing.Size(279, 20);
-            this.RCalle.TabIndex = 8;
+            this.RCalle.TabIndex = 2;
             // 
             // REmail
             // 
@@ -191,7 +191,7 @@
             this.RNumero.Location = new System.Drawing.Point(131, 181);
             this.RNumero.Name = "RNumero";
             this.RNumero.Size = new System.Drawing.Size(100, 20);
-            this.RNumero.TabIndex = 14;
+            this.RNumero.TabIndex = 3;
             // 
             // label9
             // 
@@ -208,7 +208,7 @@
             this.RNumeroInt.Location = new System.Drawing.Point(333, 180);
             this.RNumeroInt.Name = "RNumeroInt";
             this.RNumeroInt.Size = new System.Drawing.Size(77, 20);
-            this.RNumeroInt.TabIndex = 16;
+            this.RNumeroInt.TabIndex = 4;
             // 
             // label10
             // 
@@ -225,7 +225,7 @@
             this.RColonia.Location = new System.Drawing.Point(131, 214);
             this.RColonia.Name = "RColonia";
             this.RColonia.Size = new System.Drawing.Size(100, 20);
-            this.RColonia.TabIndex = 18;
+            this.RColonia.TabIndex = 5;
             // 
             // label11
             // 
@@ -240,9 +240,10 @@
             // 
             this.RCPostal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.RCPostal.Location = new System.Drawing.Point(333, 214);
+            this.RCPostal.MaxLength = 5;
             this.RCPostal.Name = "RCPostal";
             this.RCPostal.Size = new System.Drawing.Size(77, 20);
-            this.RCPostal.TabIndex = 20;
+            this.RCPostal.TabIndex = 6;
             // 
             // label12
             // 
@@ -259,7 +260,7 @@
             this.RMunip.Location = new System.Drawing.Point(163, 251);
             this.RMunip.Name = "RMunip";
             this.RMunip.Size = new System.Drawing.Size(247, 20);
-            this.RMunip.TabIndex = 22;
+            this.RMunip.TabIndex = 7;
             // 
             // label13
             // 
@@ -276,7 +277,7 @@
             this.REstado.Location = new System.Drawing.Point(131, 287);
             this.REstado.Name = "REstado";
             this.REstado.Size = new System.Drawing.Size(279, 20);
-            this.REstado.TabIndex = 24;
+            this.REstado.TabIndex = 8;
             // 
             // Registro
             // 

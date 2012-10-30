@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using LibPrintTicket;
 //CODIGO PARA RESTAURAR BASE DE DATOS mysql -u root -p -A <dumpfile.SQLa
 namespace FacturasCeylan
 {
@@ -70,9 +70,10 @@ namespace FacturasCeylan
         {
             if ((!String.IsNullOrEmpty(AArtName.Text)) && (!String.IsNullOrEmpty(AType.Text)))
             {
-                articulos.Add(new Articulo(AArtName.Text, APrecio.Value, Convert.ToInt32(ACant.Value), AType.Text));              
+                articulos.Add(new Articulo(AArtName.Text, Convert.ToSingle(APrecio.Value), Convert.ToInt32(ACant.Value), AType.Text));              
                 AListadoArt.Rows.Add(Convert.ToInt32(ACant.Value),AArtName.Text, APrecio.Value,  APrecio.Value * ACant.Value);
             }
+           
         }
 
         private void FACTURAR_Click(object sender, EventArgs e)
@@ -81,11 +82,19 @@ namespace FacturasCeylan
             {
                 Factura nuevo = new Factura(cliente, articulos);
                 nuevo.pushFactura();
+                /* ---------------------------------------------------------------------*/
+                this.Close();
             }
             else
             {
                 MessageBox.Show("ERROR FALTA CLIENTE O ARTICULOS");
             }
+        }
+
+        private void AListadoArt_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            //MessageBox.Show(AListadoArt.SelectedRows[0].Index.ToString());
+            articulos.RemoveAt(AListadoArt.SelectedRows[0].Index);
         }
     }
 }

@@ -7,12 +7,12 @@ namespace FacturasCeylan
 {
     class Articulo
     {
-        decimal Precio;
+        float Precio;
         String Nombre;
         int Cantidad;
-        String Tipo;      
+        String Tipo;   
         //A Singleton 
-        public decimal precio
+        public float precio
         {
             get
             {
@@ -41,13 +41,13 @@ namespace FacturasCeylan
             }
         }
 
-        public Articulo(String Nombre, decimal precio, int cantidad,String tipo)
+        public Articulo(String Nombre, float precio, int cantidad,String tipo)
         {
             this.Nombre = Nombre;
             
             this.Cantidad = cantidad;
             this.Precio = precio * cantidad;
             this.Tipo = tipo;
-        }        
+        }  
     }
 }

@@ -23,6 +23,7 @@ namespace FacturasCeylan
 
         private void Imprime_Click(object sender, EventArgs e)
         {
+            /*
             Image img = Image.FromFile("C:\\CBB.jpg");
             
             //VALIDAR Q EL FOLIO SEA UN NUMERO Y ADEMAS EXISTA EN LA BD
@@ -50,6 +51,7 @@ namespace FacturasCeylan
             ticket.AddFooterLine("VUELVA PRONTO");
             
             ticket.PrintTicket("HP LaserJet Professional P1102w"); //Nombre de la impresora de tickets
+             */
         }
     }
 }
